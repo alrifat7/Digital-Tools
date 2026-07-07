@@ -4,6 +4,7 @@ import Header from "./Components/ui/Header";
 import Products from "./Components/Pages/Products";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import GetStarted from "./Components/ui/GetStarted";
 
 const ProductsPromis = fetch("/ProductsCard.json").then((res) => res.json());
 
@@ -12,13 +13,16 @@ function App() {
 
   return (
     <>
+    <div>
       <Navbar SelectCard={selectCard} />
       <Header />
       <Products
         ProductsPromis={ProductsPromis}
         SelectCard={selectCard}
         setSelectCard={setSelectCard}
-      />
+      />z
+      <GetStarted />
+      </div>
       <ToastContainer />
     </>
   );
